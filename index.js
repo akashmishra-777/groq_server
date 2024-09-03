@@ -23,7 +23,7 @@ app.post("/ai",async (req,res)=>{
     model: "llama3-8b-8192",
   })
 
-  res.send(`<h1>Question : </h1> <br/> <p>Answer : ${response.choices[0].message.content}</p>`)
+  res.send(` ${response.choices[0].message.content}`)
 
  
 })
