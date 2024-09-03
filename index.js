@@ -1,8 +1,10 @@
 const express = require("express");
+const cors = require("cors")
 const app = express();
 const PORT = 8000;
 const Groq = require("groq-sdk");
 const groq = new Groq({apiKey:"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"});
+app.use(cors())
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
